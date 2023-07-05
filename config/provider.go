@@ -7,10 +7,9 @@ package config
 import (
 	// Note(turkenh): we are importing this to embed provider schema document
 	_ "embed"
+	object_storage_project "github.com/rgroemmer/provider-poc/config/object-storage-project"
 
 	ujconfig "github.com/upbound/upjet/pkg/config"
-
-	"github.com/rgroemmer/provider-poc/config/null"
 )
 
 const (
@@ -35,7 +34,7 @@ func GetProvider() *ujconfig.Provider {
 
 	for _, configure := range []func(provider *ujconfig.Provider){
 		// add custom config functions
-		null.Configure,
+		object_storage_project.Configure,
 	} {
 		configure(pc)
 	}
