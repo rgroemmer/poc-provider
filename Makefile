@@ -2,12 +2,12 @@
 # Setup Project
 
 PROJECT_NAME ?= provider-poc
-PROJECT_REPO ?= github.com/rgroemmer/$(PROJECT_NAME)
+PROJECT_REPO ?= https://github.com/rgroemmer/$(PROJECT_NAME).git
 
 export TERRAFORM_VERSION ?= 1.3.3
 
 export TERRAFORM_PROVIDER_SOURCE ?= SchwarzIT/stackit
-export TERRAFORM_PROVIDER_REPO ?= https://github.com/SchwarzIT/terraform-provider-stackit
+export TERRAFORM_PROVIDER_REPO ?= https://github.com/SchwarzIT/terraform-provider-stackit.git
 export TERRAFORM_PROVIDER_VERSION ?= 1.21.0 
 export TERRAFORM_PROVIDER_DOWNLOAD_NAME ?= terraform-provider-stackit
 export TERRAFORM_PROVIDER_DOWNLOAD_URL_PREFIX ?= https://releases.hashicorp.com/$(TERRAFORM_PROVIDER_DOWNLOAD_NAME)/$(TERRAFORM_PROVIDER_VERSION)
